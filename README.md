@@ -36,7 +36,7 @@ At turtlebot3 "~/.bashrc", add
 ROS_MASTER_URI=http://IP_OF_REMOTE_PC:11311
 ROS_IP=IP_OF_TURTLEBOT3
 ```
-
+  <br />
   * #### Turtlebot3 master
 ```
 At Remote PC "~/.bashrc", add
