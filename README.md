@@ -13,9 +13,9 @@ Turtlebot3, Rasberry pi, OpenCR board (all things are packaged in a Turtlebot3 b
 
 * Assemble turtlebot3, Rasberry pi and OpenCR through manual.
 * Boot Raseberry pi with micro SDCard
-  ＊ There is a 8GB micro SDCard in a Turtlebot3 box
-  ＊ SDCard is empty. Need download UBUNTU-MATE 16.04 for rasberry pi installation
-    ＊ https://yeopbox.com/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4-3-raspberry-pi%EC%97%90-%EC%9A%B0%EB%B6%84%ED%88%AC-%EB%A9%94%EC%9D%B4%ED%8A%B8-16-04-lts-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/
+  *  There is a 8GB micro SDCard in a Turtlebot3 box
+  *  SDCard is empty. Need download UBUNTU-MATE 16.04 for rasberry pi installation
+    *  https://yeopbox.com/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4-3-raspberry-pi%EC%97%90-%EC%9A%B0%EB%B6%84%ED%88%AC-%EB%A9%94%EC%9D%B4%ED%8A%B8-16-04-lts-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/
   
 ```
 Give the example
