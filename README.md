@@ -36,7 +36,6 @@ At turtlebot3 "~/.bashrc", add
 ROS_MASTER_URI=http://IP_OF_REMOTE_PC:11311
 ROS_IP=IP_OF_TURTLEBOT3
 ``` 
-<br />
   * #### Turtlebot3 master
 ```
 At Remote PC "~/.bashrc", add
@@ -59,6 +58,7 @@ ROS_IP=IP_OF_TURTLEBOT3
   * Connect Remote PC and rasberry pi by ethernet cable.
   * At Remote PC ethernet configuration, ipv4 window, set connection mode as **"share with other computers"**. <br />
     * This makes Remote PC and turtlebot3 connected by ethernet cable.
+  * Check ip address of Remote PC and turtlebot3 by **"ifconfig"** command. <br />
 
 
 ## Running the tests
