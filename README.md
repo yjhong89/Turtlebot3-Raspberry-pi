@@ -23,9 +23,9 @@ Turtlebot3, Rasberry pi, OpenCR board (all things are packaged in a Turtlebot3 b
 
 ### Network configuration
 
-Turtlebot3 can be connected to remote PC by wifi networks or ethernet cable. \\
-To drive ROS for both components, they need to know other's ip network \\ by setting "ROS_MASTER_URI" and "ROS_IP" at "~/.bashrc".\\
-Turtlebot3 or Remote PC both can be "ROS_MASTER_URI".
+Turtlebot3 can be connected to remote PC by wifi networks or ethernet cable. <br />
+To drive ROS for both components, they need to know other's ip network by setting "ROS_MASTER_URI" and "ROS_IP" at "~/.bashrc". <br />
+Turtlebot3 or Remote PC both can be "ROS_MASTER_URI". <br />
 
 * #### Remote PC master
 > * At Remote PC "~/.bashrc", add
