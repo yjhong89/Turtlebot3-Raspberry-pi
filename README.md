@@ -9,26 +9,54 @@ Based on http://emanual.robotis.com/
 
 Turtlebot3, Rasberry pi, OpenCR board (all things are packaged in a Turtlebot3 box)
 
-### Installing
+### Basic installation
 
 * Assemble turtlebot3, Rasberry pi and OpenCR through manual.
-* Boot Raseberry pi with micro SDCard
->  *  There is a 8GB micro SDCard in a Turtlebot3 box
->  *  SDCard is empty. Need download UBUNTU-MATE 16.04 for rasberry pi installation
->>  *  [Install UBUNTU-MATE](https://yeopbox.com/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4-3-raspberry-pi%EC%97%90-%EC%9A%B0%EB%B6%84%ED%88%AC-%EB%A9%94%EC%9D%B4%ED%8A%B8-16-04-lts-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/)
->>  *  [Rasberry pi setup](http://emanual.robotis.com/docs/en/platform/turtlebot3/raspberry_pi_3_setup/#install-linux-ubuntu-mate)
-* Follow [Remote PC setup](http://emanual.robotis.com/docs/en/platform/turtlebot3/pc_setup/)
+* Boot Raseberry pi with micro SDCard.
+>  *  There is a 8GB micro SDCard in a Turtlebot3 box.
+>  *  SDCard is empty. Need download UBUNTU-MATE 16.04 for rasberry pi installation.
+>>  *  [Install UBUNTU-MATE](https://yeopbox.com/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4-3-raspberry-pi%EC%97%90-%EC%9A%B0%EB%B6%84%ED%88%AC-%EB%A9%94%EC%9D%B4%ED%8A%B8-16-04-lts-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/), [Rasberry pi setup](http://emanual.robotis.com/docs/en/platform/turtlebot3/raspberry_pi_3_setup/#install-linux-ubuntu-mate)
+* Follow [Remote PC setup](http://emanual.robotis.com/docs/en/platform/turtlebot3/pc_setup/).
 
-* #### Make sure ROS packages are properly installed to Rasberry pi and Remote PC 
-> * If catkin_make command is completed without any errors, ROS is well installed
+* #### Make sure ROS packages are properly installed to Rasberry pi and Remote PC.
+> * If "catkin_make" command is completed without any errors, ROS is well installed.
 
-And repeat
+### Network configuration
 
+Turtlebot3 can be connected to remote PC by wifi networks or ethernet cable.
+To drive ROS for both components, they need to know other's ip network by setting "ROS_MASTER_URI" and "ROS_IP" at "~/.bashrc".
+Turtlebot3 or Remote PC both can be "ROS_MASTER_URI".
+
+* #### Remote PC master
+> * At Remote PC "~/.bashrc", add
 ```
-until finished
+ROS_MASTER_URI=http://IP_OF_REMOTE_PC:11311
+ROS_IP=IP_OF_REMOTE_PC
+```
+> * At turtlebot3 "~/.bashrc", add
+```
+ROS_MASTER_URI=http://IP_OF_REMOTE_PC:11311
+ROS_IP=IP_OF_TURTLEBOT3
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+* #### Turtlebot3 master
+> * At Remote PC "~/.bashrc", add
+```
+ROS_MASTER_URI=http://IP_OF_TURTLEBOT3:11311
+ROS_IP=IP_OF_REMOTE_PC
+```
+> * At turtlebot3 "~/.bashrc", add
+```
+ROS_MASTER_URI=http://IP_OF_TURTLEBOT3:11311
+ROS_IP=IP_OF_TURTLEBOT3
+```
+> * Make sure "http://" is only prefixed for "ROS_MASTER_URI". "http://" should not be added to "ROS_IP" and "ROS_HOSTNAME"
+
+* #### Connection by wifi networks
+> * For Linux installed Remote PC, need to setup [UBUNTU HOTSPOT](http://ubuntuhandbook.org/index.php/2016/04/create-wifi-hotspot-ubuntu-16-04-android-supported/) to communicate only with turtlebot3.
+> * After ubuntu hotspot setup, connect turtlebot3 to hidden wifi networks created by Remote PC.
+> * Check ip address of Remote PC and turtlebot3 by "ifconfig" command.
+
 
 ## Running the tests
 
