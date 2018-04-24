@@ -35,8 +35,7 @@ ROS_IP=IP_OF_REMOTE_PC
 At turtlebot3 "~/.bashrc", add
 ROS_MASTER_URI=http://IP_OF_REMOTE_PC:11311
 ROS_IP=IP_OF_TURTLEBOT3
-```
-  <br />
+```  
   * #### Turtlebot3 master
 ```
 At Remote PC "~/.bashrc", add
@@ -54,6 +53,11 @@ ROS_IP=IP_OF_TURTLEBOT3
   * For Linux installed Remote PC, need to setup [UBUNTU HOTSPOT](http://ubuntuhandbook.org/index.php/2016/04/create-wifi-hotspot-ubuntu-16-04-android-supported/) to communicate only with turtlebot3. <br />
   * After ubuntu hotspot setup, connect turtlebot3 to hidden wifi networks created by Remote PC. <br />
   * Check ip address of Remote PC and turtlebot3 by **"ifconfig"** command. <br />
+  
+* #### Connection by ethernet <br />
+  * Connect Remote PC and rasberry pi by ethernet cable.
+  * At Remote PC ethernet configuration, ipv4 window, set connection mode as **"share with other computers"**. <br />
+    * This makes Remote PC and turtlebot3 connected by ethernet cable.
 
 
 ## Running the tests
