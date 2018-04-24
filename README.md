@@ -19,8 +19,8 @@ Turtlebot3, Rasberry pi, OpenCR board (all things are packaged in a Turtlebot3 b
 >>  *  [Rasberry pi setup](http://emanual.robotis.com/docs/en/platform/turtlebot3/raspberry_pi_3_setup/#install-linux-ubuntu-mate)
 * Follow [Remote PC setup](http://emanual.robotis.com/docs/en/platform/turtlebot3/pc_setup/)
 
-#### Make sure ROS packages are properly installed to Rasberry pi and Remote PC 
-* If catkin_make command is completed without any errors, ROS is well installed
+* #### Make sure ROS packages are properly installed to Rasberry pi and Remote PC 
+> * If catkin_make command is completed without any errors, ROS is well installed
 
 And repeat
 
