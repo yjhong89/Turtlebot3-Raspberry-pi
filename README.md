@@ -24,10 +24,10 @@ Turtlebot3, Rasberry pi, OpenCR board (all things are packaged in a Turtlebot3 b
 ### Network configuration
 
 * Turtlebot3 can be connected to remote PC by wifi networks or ethernet cable. <br />
-* To drive ROS for both components, they need to know other's ip network by setting "ROS_MASTER_URI" and "ROS_IP" at "~/.bashrc". <br />
+* To drive ROS for both components, they need to know other's ip network <br/> by setting "ROS_MASTER_URI" and "ROS_IP" at "~/.bashrc". <br />
 * Turtlebot3 or Remote PC both can be "ROS_MASTER_URI". <br />
-  1. #### Remote PC master 
 ```
+#### Remote PC master
 At Remote PC "~/.bashrc", add
 ROS_MASTER_URI=http://IP_OF_REMOTE_PC:11311
 ROS_IP=IP_OF_REMOTE_PC
@@ -35,9 +35,8 @@ ROS_IP=IP_OF_REMOTE_PC
 At turtlebot3 "~/.bashrc", add
 ROS_MASTER_URI=http://IP_OF_REMOTE_PC:11311
 ROS_IP=IP_OF_TURTLEBOT3
-``` 
-  2. #### Turtlebot3 master
-```
+
+#### Turtlebot3 master
 At Remote PC "~/.bashrc", add
 ROS_MASTER_URI=http://IP_OF_TURTLEBOT3:11311
 ROS_IP=IP_OF_REMOTE_PC
@@ -59,9 +58,12 @@ ROS_IP=IP_OF_TURTLEBOT3
   * At Remote PC ethernet configuration, ipv4 window, set connection mode as **"share with other computers"**. <br />
     * This makes Remote PC and turtlebot3 connected by ethernet cable.
   * Check ip address of Remote PC and turtlebot3 by **"ifconfig"** command. <br />
+  
+* Check connection by **ssh** command. If connection is successfully setup, you can access to turtlebot3 with turtlebot3 ip address.
+  * Do not need connect monitor, keyboard and mouse to turtlebot3 anymore!
 
 
-## OpenCR setupt with Arduino
+### OpenCR setupt with Arduino
 
 * [OpenCR setup](http://emanual.robotis.com/docs/en/platform/turtlebot3/opencr_setup/#opencr-setup),  <br />
   * Make sure **jump_to_fw** text be printed. <br/>
@@ -76,23 +78,11 @@ ROS_IP=IP_OF_TURTLEBOT3
   * Open serial monitor and check each DYNAMIXEL motor work successfully.
   * After setup two DYNAMIXELs, connect both DYNAMIXELs to OpenCR and upload **turtlebot3_core**.
   
-  
-  
+
+## Move Turtlebot3
 
 ```
-Give an example
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
 Add additional notes about how to deploy this on a live system
 
 ## Built With
@@ -119,8 +109,4 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
