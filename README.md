@@ -68,11 +68,11 @@ ROS_IP=IP_OF_TURTLEBOT3
   * Do not need to install Arduino on rasberry pi. Install Arduino on your Remote pc. [Arduino setup](http://emanual.robotis.com/docs/en/parts/controller/opencr10/#arduino-ide)(<br/>
   * Connect OpenCR to your Remote pc and run Arudino on your Remote PC.
 
-* Before uploading **Examples/turtlebot3/turtlebot3_model/turtlebot3_core**, need to setup first DYNAMIXEL firmware on OpenCR. <br/>
+* Before uploading **Examples/turtlebot3/turtlebot3_model/turtlebot3_core**, <br/>need to setup first DYNAMIXEL firmware on OpenCR. <br/>
   * If not, DYNAMIXEL will not move at all.
   
 * In Arduino window, go to **Examples/turtlebot3/turtlebot3_setup/turtlebot3_motor_setup** and upload. <br/>
-  * When setup DYNAMIXEL, need to connect only one DYNAMIXEL to OpenCR. Motor_setup firmware can not find two DYNAMIXEL at the same time. <br/>
+  * When setup DYNAMIXEL, need to connect only one DYNAMIXEL to OpenCR. <br/>Motor_setup firmware can not find two DYNAMIXEL at the same time. <br/>
   * Open serial monitor and check each DYNAMIXEL motor work successfully.
   * After setup two DYNAMIXELs, connect both DYNAMIXELs to OpenCR and upload **turtlebot3_core**.
   
