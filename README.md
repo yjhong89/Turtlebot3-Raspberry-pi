@@ -59,8 +59,9 @@ ROS_IP=IP_OF_TURTLEBOT3
     * This makes Remote PC and turtlebot3 connected by ethernet cable.
   * Check ip address of Remote PC and turtlebot3 by **"ifconfig"** command. <br />
   
-* Check connection by **ssh** command. If connection is successfully setup, you can access to turtlebot3 with turtlebot3 ip address.
+* Check connection by **ssh** command. If connection is successfully setup, you can access to turtlebot3 with turtlebot3 ip address.  
   * Do not need connect monitor, keyboard and mouse to turtlebot3 anymore!
+  
 
 
 ### OpenCR setupt with Arduino
@@ -74,10 +75,13 @@ ROS_IP=IP_OF_TURTLEBOT3
   * If not, DYNAMIXEL will not move at all.
   
 * In Arduino window, go to **Examples/turtlebot3/turtlebot3_setup/turtlebot3_motor_setup** and upload. <br/>
-  * When setup DYNAMIXEL, need to connect only one DYNAMIXEL to OpenCR. <br/>Motor_setup firmware can not find two DYNAMIXEL at the same time. <br/>
+  * When setup DYNAMIXEL, need to connect only one DYNAMIXEL to OpenCR. <br/>Motor_setup firmware can not find two DYNAMIXELs at the same time. <br/>
   * Open serial monitor and check each DYNAMIXEL motor work successfully.
   * After setup two DYNAMIXELs, connect both DYNAMIXELs to OpenCR and upload **turtlebot3_core**.
   * After that, connect OpenCR to rasberry pi.
+```
+ssh turtlebot3_name@IP_OF_TURTLEBOT3
+```
   
 
 ## Move Turtlebot3
