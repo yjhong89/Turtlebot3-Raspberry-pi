@@ -82,37 +82,37 @@ ROS_IP=IP_OF_TURTLEBOT3
 
 ## Move Turtlebot3
 
-### Run ros
+### Bringup Turtlebot3
+To move Turtlebot3, need to do **bringup** first to Turtlebot3
+
 * Run **roscore** at master node
   * If **roscore** gives an error, check **"ROS_MASTER_URI"** and **"ROS_IP"** in ~/.bashrc at Remote PC and Turtlebot3
 ```
 roscore
 ```
+* [Bring up turtlebot3](http://emanual.robotis.com/docs/en/platform/turtlebot3/bringup/#bringup)
+```
+roslaunch turtlebot3_bringup turtlebot3_robot.launch
+```
+* [Teleoperation with keyboard or joystick](http://emanual.robotis.com/docs/en/platform/turtlebot3/teleoperation/#teleoperation)
+  * When teleoperate with joystick, make sure joystic well connected via **ls /dev/input/js* ** command
 
-Add additional notes about how to deploy this on a live system
 
-## Built With
+## Setup webcam to rasberry pi
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* Install usb_cam ros package
+```
+cd ~/catkin_ws/src
+git clone https://github.com/bosch-ros-pkg/usb_cam.git
+cd ..
+catkin_make(build again)
+```
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+## Reference
 
-## Versioning
+1. [Turtlebot3 emanual](http://emanual.robotis.com/)
+2. [Robotics blog](http://enssionaut.com/xe/board_robotics)
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 
