@@ -99,7 +99,7 @@ roscore
 roslaunch turtlebot3_bringup turtlebot3_robot.launch
 ```
 * [Teleoperation with keyboard or joystick](http://emanual.robotis.com/docs/en/platform/turtlebot3/teleoperation/#teleoperation)
-  * When teleoperate with joystick, make sure joystic well connected via **ls /dev/input/js0 ** command
+  * When teleoperate with joystick, make sure joystic well connected via **ls /dev/input/js0** command
 
 
 ## Setup webcam to rasberry pi
