@@ -1,7 +1,7 @@
 # Turtlebot3-Rasberripy
 Installation of turtlebot3 with Rasberry pi
 
-## Getting Started
+## Installation
 
 Based on http://emanual.robotis.com/
 
@@ -26,7 +26,7 @@ Turtlebot3, Rasberry pi, OpenCR board (all things are packaged in a Turtlebot3 b
 * Turtlebot3 can be connected to remote PC by wifi networks or ethernet cable. <br />
 * To drive ROS for both components, they need to know other's ip network by setting "ROS_MASTER_URI" and "ROS_IP" at "~/.bashrc". <br />
 * Turtlebot3 or Remote PC both can be "ROS_MASTER_URI". <br />
-  * #### Remote PC master 
+  1. #### Remote PC master 
 ```
 At Remote PC "~/.bashrc", add
 ROS_MASTER_URI=http://IP_OF_REMOTE_PC:11311
@@ -36,7 +36,7 @@ At turtlebot3 "~/.bashrc", add
 ROS_MASTER_URI=http://IP_OF_REMOTE_PC:11311
 ROS_IP=IP_OF_TURTLEBOT3
 ``` 
-  * #### Turtlebot3 master
+  2. #### Turtlebot3 master
 ```
 At Remote PC "~/.bashrc", add
 ROS_MASTER_URI=http://IP_OF_TURTLEBOT3:11311
@@ -55,19 +55,29 @@ ROS_IP=IP_OF_TURTLEBOT3
   * Check ip address of Remote PC and turtlebot3 by **"ifconfig"** command. <br />
   
 * #### Connection by ethernet <br />
-  * Connect Remote PC and rasberry pi by ethernet cable.
+  * Connect Remote PC and rasberry pi by ethernet cable. <br/>
   * At Remote PC ethernet configuration, ipv4 window, set connection mode as **"share with other computers"**. <br />
     * This makes Remote PC and turtlebot3 connected by ethernet cable.
   * Check ip address of Remote PC and turtlebot3 by **"ifconfig"** command. <br />
 
 
-## Running the tests
+## OpenCR setupt with Arduino
 
-Explain how to run the automated tests for this system
+* [OpenCR setup](http://emanual.robotis.com/docs/en/platform/turtlebot3/opencr_setup/#opencr-setup),  <br />
+  * Make sure **jump_to_fw** text be printed. <br/>
+  * Do not need to install Arduino on rasberry pi. Install Arduino on your Remote pc. [Arduino setup](http://emanual.robotis.com/docs/en/parts/controller/opencr10/#arduino-ide)(<br/>
+  * Connect OpenCR to your Remote pc and run Arudino on your Remote PC.
 
-### Break down into end to end tests
-
-Explain what these tests test and why
+* Before uploading **Examples/turtlebot3/turtlebot3_model/turtlebot3_core**, need to setup first DYNAMIXEL firmware on OpenCR. <br/>
+  * If not, DYNAMIXEL will not move at all.
+  
+* In Arduino window, go to **Examples/turtlebot3/turtlebot3_setup/turtlebot3_motor_setup** and upload. <br/>
+  * When setup DYNAMIXEL, need to connect only one DYNAMIXEL to OpenCR. Motor_setup firmware can not find two DYNAMIXEL at the same time. <br/>
+  * Open serial monitor and check each DYNAMIXEL motor work successfully.
+  * After setup two DYNAMIXELs, connect both DYNAMIXELs to OpenCR and upload **turtlebot3_core**.
+  
+  
+  
 
 ```
 Give an example
