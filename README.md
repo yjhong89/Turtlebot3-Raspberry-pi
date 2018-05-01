@@ -150,7 +150,7 @@ rosrun iamge_view image_view image:=/usb_cam/image_raw _transport:=compressed
   * May be **/dev/video0**, **/dev/video1**, **/dev/video2**...
   
 * Launch file should be edited. Distinguishing cameras by **group**. 
-  * Check **usb_cam_multi_cam.launch** file.
+* Check **usb_cam_multi_cam.launch** file.
 
 ## Reference
 
