@@ -149,7 +149,7 @@ rosrun iamge_view image_view image:=/usb_cam/image_raw _transport:=compressed
 * Check web cams are well connected
   * May be **/dev/video0**, **/dev/video1**, **/dev/video2**...
   
-* Launch file should be edited. Distinguishing cameras by 'group' <br/>
+* Launch file should be edited. Distinguishing cameras by 'group'. <br/>
   * Check **usb_cam_multi_cam.launch** file.
 
 ## Reference
