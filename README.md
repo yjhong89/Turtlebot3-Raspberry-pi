@@ -1,9 +1,7 @@
-# Turtlebot3-Rasberri py
+# Turtlebot3 Rasberry pi
 Installation of turtlebot3 with Raspberry pi
 
 ## Installation
-
-Based on http://emanual.robotis.com/
 
 ### Prerequisites
 
