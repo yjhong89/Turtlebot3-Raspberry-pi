@@ -137,7 +137,7 @@ ROS_HOSTNAME=localhost
 ```
 roslaunch usb_cam usb_cam-test.launch
 ```
-* Compressed image for fast transferring
+* Compressed image for fast transferring. <br/>
   * Need to execute **roscore** first when you do **rosrun**. **rosrun** just execute node.
 ```
 sudo apt-get install ros-kinetic-compressed-image-transport
@@ -149,7 +149,7 @@ rosrun iamge_view image_view image:=/usb_cam/image_raw _transport:=compressed
 * Check web cams are well connected
   * May be **/dev/video0**, **/dev/video1**, **/dev/video2**...
   
-* Launch file should be edited. Distinguishing cameras by 'group'
+* Launch file should be edited. Distinguishing cameras by 'group' <br/>
   * Check **usb_cam_multi_cam.launch** file.
 
 ## Reference
