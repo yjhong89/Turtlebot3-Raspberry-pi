@@ -1,5 +1,5 @@
 # Turtlebot3-Rasberri py
-Installation of turtlebot3 with Rasberry pi
+Installation of turtlebot3 with Raspberry pi
 
 ## Installation
 
