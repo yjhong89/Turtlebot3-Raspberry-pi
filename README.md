@@ -90,7 +90,8 @@ ssh turtlebot3_name@IP_OF_TURTLEBOT3
 To move Turtlebot3, need to do **bringup** first to Turtlebot3
 
 * Run **roscore** at master node
-  * If **roscore** gives an error, check **"ROS_MASTER_URI"** and **"ROS_IP"** in ~/.bashrc at Remote PC and Turtlebot3
+  * If **roscore** gives an error, check **"ROS_MASTER_URI"** and **"ROS_IP"** in ~/.bashrc at Remote PC and Turtlebot3.
+  * **roscore** must be executed when you connect Turtlebot3 and Remote PC.
 ```
 roscore
 ```
@@ -99,19 +100,57 @@ roscore
 roslaunch turtlebot3_bringup turtlebot3_robot.launch
 ```
 * [Teleoperation with keyboard or joystick](http://emanual.robotis.com/docs/en/platform/turtlebot3/teleoperation/#teleoperation)
-  * When teleoperate with joystick, make sure joystic well connected via **ls /dev/input/js0** command
+  * When teleoperate with joystick, make sure joystic well connected via **<ls /dev/input/js0>** command
 
+### ROSTOPIC
+* If connection is well established, you can check **rostopic list** after executing **roscore** and **bringup**
+```
+rostopic list
+```
+* Can check rostopic value at Remote PC
+```
+rostopic echo /cmd_vel
+```
 
 ## Setup webcam to rasberry pi
 
 * Install usb_cam ros package
+  * Make sure web cam is well connected via **<ls /dev/video*>** command
 ```
 cd ~/catkin_ws/src
 git clone https://github.com/bosch-ros-pkg/usb_cam.git
 cd ..
 catkin_make(build again)
 ```
+### Test usb_cam before connect Remote PC
 
+* Set **ROS_MASTER_URI** and **ROS_HOSTNAME** as localhost
+```
+At turtlebot3 "~/.bashrc", 
+ROS_MASTER_URI=http://localhost:11311
+ROS_HOSTNAME=localhost
+```
+* Run ROS
+  * **usb_cam-test.launch** file is located at **~/catkin_ws/src/usb_cam/launch/usb_cam-test.launch**.
+  * Do not need to execute **roscore** when you do **roslaunch**. Launch file will execute **roscore** itself.
+  * Camera image window will be popped up.
+```
+roslaunch usb_cam usb_cam-test.launch
+```
+* Compressed image for fast transferring
+  * Need to execute **roscore** first when you do **rosrun**. **rosrun** just execute node.
+```
+sudo apt-get install ros-kinetic-compressed-image-transport
+roscore
+rosrun iamge_view image_view image:=/usb_cam/image_raw _transport:=compressed
+```
+
+### Multiple web cams
+* Check web cams are well connected
+  * May be **/dev/video0**, **/dev/video1**, **/dev/video2**...
+  
+* Launch file should be edited. Distinguishing cameras by 'group'
+  * Check **usb_cam_multi_cam.launch** file.
 
 ## Reference
 
