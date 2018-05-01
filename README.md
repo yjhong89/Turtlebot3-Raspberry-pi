@@ -7,18 +7,18 @@ Based on http://emanual.robotis.com/
 
 ### Prerequisites
 
-Turtlebot3, Rasberry pi, OpenCR board (all things are packaged in a Turtlebot3 box)
+Turtlebot3, Raspberry pi, OpenCR board (all things are packaged in a Turtlebot3 box)
 
 ### Basic installation
 
-* Assemble turtlebot3, Rasberry pi and OpenCR through manual.
-* Boot Raseberry pi with micro SDCard. <br />
+* Assemble Turtlebot3, Raspberry pi and OpenCR through manual.
+* Boot Raspberry pi with micro SDCard. <br />
   *  There is a 8GB micro SDCard in a Turtlebot3 box. <br />
-  *  SDCard is empty. Need download UBUNTU-MATE 16.04 for rasberry pi installation. <br />
+  *  SDCard is empty. Need download UBUNTU-MATE 16.04 for raspberry pi installation. <br />
      *  [Install UBUNTU-MATE](https://yeopbox.com/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4-3-raspberry-pi%EC%97%90-%EC%9A%B0%EB%B6%84%ED%88%AC-%EB%A9%94%EC%9D%B4%ED%8A%B8-16-04-lts-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/), [Rasberry pi setup](http://emanual.robotis.com/docs/en/platform/turtlebot3/raspberry_pi_3_setup/#install-linux-ubuntu-mate) <br />
 * Follow [Remote PC setup](http://emanual.robotis.com/docs/en/platform/turtlebot3/pc_setup/).
 
-* #### Make sure ROS packages are properly installed to Rasberry pi and Remote PC. <br />
+* #### Make sure ROS packages are properly installed to Raspberry pi and Remote PC. <br />
   * If **"catkin_make"** command is completed without any errors, ROS is well installed.
 
 ### Network configuration
@@ -54,7 +54,7 @@ ROS_IP=IP_OF_TURTLEBOT3
   * Check ip address of Remote PC and turtlebot3 by **"ifconfig"** command. <br />
   
 * #### Connection by ethernet <br />
-  * Connect Remote PC and rasberry pi by ethernet cable. <br/>
+  * Connect Remote PC and raspberry pi by ethernet cable. <br/>
   * At Remote PC ethernet configuration, ipv4 window, set connection mode as **"share with other computers"**. <br />
     * This makes Remote PC and turtlebot3 connected by ethernet cable.
   * Check ip address of Remote PC and turtlebot3 by **"ifconfig"** command. <br />
@@ -68,7 +68,7 @@ ROS_IP=IP_OF_TURTLEBOT3
 
 * [OpenCR setup](http://emanual.robotis.com/docs/en/platform/turtlebot3/opencr_setup/#opencr-setup),  <br />
   * Make sure **jump_to_fw** text be printed. <br/>
-  * Do not need to install Arduino on rasberry pi. Install Arduino on your Remote PC. [Arduino setup](http://emanual.robotis.com/docs/en/parts/controller/opencr10/#arduino-ide)(<br/>
+  * Do not need to install Arduino on raspberry pi. Install Arduino on your Remote PC. [Arduino setup](http://emanual.robotis.com/docs/en/parts/controller/opencr10/#arduino-ide)(<br/>
   * Connect OpenCR to your Remote PC and run Arudino on your Remote PC.
 
 * Before uploading **Examples/turtlebot3/turtlebot3_model/turtlebot3_core**, <br/>need to setup first DYNAMIXEL firmware on OpenCR. <br/>
@@ -78,7 +78,7 @@ ROS_IP=IP_OF_TURTLEBOT3
   * When setup DYNAMIXEL, need to connect only one DYNAMIXEL to OpenCR. <br/>Motor_setup firmware can not find two DYNAMIXELs at the same time. <br/>
   * Open serial monitor and check each DYNAMIXEL motor work successfully.
   * After setup two DYNAMIXELs, connect both DYNAMIXELs to OpenCR and upload **turtlebot3_core**.
-  * After that, connect OpenCR to rasberry pi.
+  * After that, connect OpenCR to raspberry pi.
 ```
 ssh turtlebot3_name@IP_OF_TURTLEBOT3
 ```
@@ -112,7 +112,7 @@ rostopic list
 rostopic echo /cmd_vel
 ```
 
-## Setup webcam to rasberry pi
+## Setup webcam to raspberry pi
 
 * Install usb_cam ros package
   * Make sure web cam is well connected via **<ls /dev/video*>** command
