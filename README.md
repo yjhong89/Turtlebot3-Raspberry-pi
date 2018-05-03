@@ -59,6 +59,9 @@ ROS_IP=IP_OF_TURTLEBOT3
   
 * Check connection by **ssh** command. If connection is successfully setup, you can access to turtlebot3 with turtlebot3 ip address.  
   * Do not need connect monitor, keyboard and mouse to turtlebot3 anymore!
+```
+ssh turtlebot3_name@IP_OF_TURTLEBOT3
+```
   
 
 
@@ -77,9 +80,7 @@ ROS_IP=IP_OF_TURTLEBOT3
   * Open serial monitor and check each DYNAMIXEL motor work successfully.
   * After setup two DYNAMIXELs, connect both DYNAMIXELs to OpenCR and upload **turtlebot3_core**.
   * After that, connect OpenCR to raspberry pi.
-```
-ssh turtlebot3_name@IP_OF_TURTLEBOT3
-```
+
   
 
 ## Move Turtlebot3
