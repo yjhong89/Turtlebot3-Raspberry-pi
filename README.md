@@ -59,9 +59,9 @@ ROS_IP=IP_OF_TURTLEBOT3
   
 * Check connection by **ssh** command. If connection is successfully setup, you can access to turtlebot3 with turtlebot3 ip address.  
   * Do not need connect monitor, keyboard and mouse to turtlebot3 anymore!
-```
-ssh turtlebot3_name@IP_OF_TURTLEBOT3
-```
+  ```
+  ssh turtlebot3_name@IP_OF_TURTLEBOT3
+  ```
   
 
 
