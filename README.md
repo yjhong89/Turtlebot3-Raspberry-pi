@@ -65,7 +65,7 @@ ROS_IP=IP_OF_TURTLEBOT3
   
 
 
-### OpenCR setupt with Arduino
+### OpenCR setup with Arduino
 
 * [OpenCR setup](http://emanual.robotis.com/docs/en/platform/turtlebot3/opencr_setup/#opencr-setup),  <br />
   * Make sure **jump_to_fw** text be printed. <br/>
